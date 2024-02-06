@@ -1,0 +1,51 @@
+{
+	"Navbar": {
+		"about-me": "about me",
+		"portfolio": "Projects",
+		"services": "services",
+		"blog": "blog",
+		"contact": "contact"
+	},
+	"Hero Section": {
+		"welcome": "Welcome to the world!",
+		"heading": "I create websites with passion, combining visual elegance with practical application.",
+		"profession": "Fullstack developer"
+	},
+	"About Section": {
+		"about": "I strive to thoroughly understand the specifics of your company and its goals. With such knowledge, I am able to develop a unique strategy and design a website that not only reflects the uniqueness of your business in the digital space but also supports the realization of your business objectives."
+	},
+	"Technologies Section": {
+		"heading": "Technologies",
+		"heading-span": "that I use:"
+	},
+	"FAQ Section": {
+		"heading": "Frequently Asked",
+		"heading-span": "Questions?",
+		"faq": [
+			{
+				"question": "What is web development?",
+				"answer": "Web development is the process of creating websites and web applications. It encompasses both technical aspects, such as programming and coding, and creative ones, including UI/UX design."
+			},
+			{
+				"question": "What technologies are used in web development?",
+				"answer": "Various technologies are used in web development, including programming languages such as HTML, CSS, JavaScript, and various frameworks and libraries, such as React, Angular, Vue.js, and Node.js."
+			},
+			{
+				"question": "How much time does it take to build a website?",
+				"answer": "The time needed to build a website depends on many factors, including the complexity of the project, functionality, as well as the experience and resources of the development team."
+			},
+			{
+				"question": "What are the best practices in web development?",
+				"answer": "The best practices include: creating responsive websites, optimizing for search engines (SEO), ensuring security, regular testing and updates, and focusing on the user and their experiences."
+			},
+			{
+				"question": "Can I manage my website myself after it's launched?",
+				"answer": "Yes, many platforms and content management systems (CMS) allow easy content management on the site without the need for advanced technical knowledge."
+			},
+			{
+				"question": "What are the costs of creating a website?",
+				"answer": "Costs vary and depend on many factors, such as the complexity of the project, functionality, technologies used, and the experience of the development team."
+			}
+		]
+	}
+}
