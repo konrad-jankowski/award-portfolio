@@ -1,10 +1,41 @@
+"use client";
+
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import { SectionHeading } from "@/ui/atoms/SectionHeading/SectionHeading";
 
+if (typeof window !== "undefined") {
+	gsap.registerPlugin(ScrollTrigger, useGSAP);
+}
+
 export const SectionAbout = () => {
+	const main = useRef<HTMLElement | any>();
+
+	useGSAP(
+		() => {
+			const boxes = gsap.utils.toArray(".box");
+			boxes.forEach((box) => {
+				gsap.to(box, {
+					x: 150,
+					scrollTrigger: {
+						trigger: box,
+						start: "bottom bottom",
+						end: "top 20%",
+						scrub: true,
+						// markers: true,
+					},
+				});
+			});
+		},
+		{ scope: main },
+	);
+
 	return (
-		<section className="h-fit w-full bg-colorBackground pb-20 pl-[5rem] text-colorText">
+		<section className="h-fit w-full overflow-x-hidden bg-colorBackground pb-20 pl-[5rem] text-colorText">
 			<SectionHeading />
-			<div className="font-secondary mt-20 flex justify-between gap-10">
+			<div className="mt-20 flex justify-between gap-10 font-secondary">
 				<div className="w-full flex-1">
 					<h3 className="mb-6 w-full text-5xl font-medium">my workflow.</h3>
 					<p className=" max-w-sm text-xl">
@@ -12,13 +43,13 @@ export const SectionAbout = () => {
 						more.
 					</p>
 				</div>
-				<div className="flex flex-1 flex-col gap-8">
-					<h4 className="text-6xl font-bold">Frontend Development</h4>
-					<h4 className="text-6xl font-bold">Backend Development</h4>
-					<h4 className="text-6xl font-bold">Headless CMS</h4>
+				<div className="flex flex-1 flex-col gap-8 " ref={main}>
+					<h4 className="box text-6xl font-bold">Frontend Development</h4>
+					<h4 className="box text-6xl font-bold">Backend Development</h4>
+					<h4 className="box text-6xl font-bold">Headless CMS</h4>
 				</div>
 			</div>
-			<div className="font-secondary mt-20 flex justify-between gap-10">
+			<div className="mt-20 flex justify-between gap-10 font-secondary">
 				<div className="w-full flex-1">
 					<h3 className="mb-6 w-full text-5xl font-medium">my stack.</h3>
 					<p className=" max-w-sm text-xl">

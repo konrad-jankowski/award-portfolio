@@ -3,6 +3,7 @@ import { Michroma, Roboto } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Navbar } from "@/ui/molecules/Navbar/Navbar";
+import { CustomCursor } from "@/ui/molecules/CustomCursor/CustomCursor";
 
 const michroma = Michroma({ subsets: ["latin"], weight: ["400"] });
 const roboto = Roboto({
@@ -26,6 +27,7 @@ export default function LocaleLayout({
 	return (
 		<html lang={locale} suppressHydrationWarning>
 			<body className={`${michroma.className} ${roboto.variable}`}>
+				<CustomCursor />
 				<Providers>
 					<div className="relative">
 						<Navbar />
