@@ -1,13 +1,19 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export const HeroHeading = () => {
 	const [role, setRole] = useState("WEB DEVELOPER");
 	const roles = ["WEB DEVELOPER", "FRONT END DEVELOPER", "BACK END DEVELOPER"];
 
-	useEffect(() => {
+	if (typeof window !== "undefined") {
+		gsap.registerPlugin(ScrollTrigger, useGSAP);
+	}
+
+	useGSAP(() => {
 		// Animacja początkowa
 		gsap.to(".animate-text", {
 			duration: 1,
@@ -32,29 +38,50 @@ export const HeroHeading = () => {
 		return () => clearInterval(interval); // Czyszczenie interwału przy demontażu komponentu
 	}, []);
 
+	useGSAP(() => {
+		gsap.to(".text-container", {
+			opacity: 0,
+			duration: 4,
+			scrollTrigger: {
+				trigger: ".text-container",
+				start: "-100rem 10rem",
+				end: "center",
+				// toggleActions: "restart pouse reverse pouse",
+				scrub: 1,
+			},
+		});
+	}, {});
+
 	return (
-		<div className="flex flex-col items-center gap-3 text-center">
-			<p
-				className="animate-text inline-flex items-center gap-6 text-8xl text-colorText"
-				style={{ opacity: 0 }}
-			>
-				<span className="h-6 w-6 rounded-full bg-colorText" /> HELLO
-				<span className="h-6 w-6 rounded-full bg-colorText" />
-			</p>
-			<br />
-			<p
-				className="animate-text inline-flex items-center gap-6 text-center text-8xl text-colorText"
-				style={{ opacity: 0 }}
-			>
-				I AM
-			</p>
-			<br />
-			<p
-				className="animate-text  inline-flex items-center gap-6 text-center text-8xl text-colorText"
-				style={{ opacity: 0 }}
-			>
-				Konrad
-			</p>
+		<div className=" relative flex flex-col items-center gap-5 text-center">
+			<div className="fixed inset-0 flex items-center justify-center">
+				<div className="">
+					<div className="h-[600px] w-[600px] rounded-full bg-gradient-to-b from-white/10 from-[14%] to-transparent to-[62%]"></div>
+				</div>
+			</div>
+			<div className="text-container">
+				<p
+					className="animate-text inline-flex items-center gap-6 text-8xl tracking-wider text-colorText"
+					style={{ opacity: 0 }}
+				>
+					<span className="h-6 w-6 rounded-full bg-colorText" /> HELLO
+					<span className="h-6 w-6 rounded-full bg-colorText" />
+				</p>
+				<br />
+				<p
+					className="stroked animate-text inline-flex items-center gap-6 text-center text-8xl font-bold text-colorText"
+					style={{ opacity: 0 }}
+				>
+					I AM
+				</p>
+				<br />
+				<p
+					className="animate-text  inline-flex items-center gap-6 text-center text-8xl text-colorText"
+					style={{ opacity: 0 }}
+				>
+					Konrad
+				</p>
+			</div>
 		</div>
 	);
 };

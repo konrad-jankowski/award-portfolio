@@ -4,17 +4,17 @@
 
 :root {
 	--color-primary: 39 222 191;
-	--color-background: 255 255 255;
-	--color-text: 33 36 39;
+	--color-background: 28 31 36;
+	--color-text: 227 224 219;
 }
 
-:root[class~="light"] {
+:root[class~="dark"] {
 	--color-primary: 39 222 191;
-	--color-background: 0 0 0;
-	--color-text: 255 255 255;
+	--color-background: 227 227 227;
+	--color-text: 28 31 36;
 }
 
-body {
+/* body {
 	cursor: none;
 }
 
@@ -43,4 +43,9 @@ a {
 	color: inherit;
 	text-decoration: none;
 	cursor: none;
+} */
+
+.stroked {
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 1px;
 }

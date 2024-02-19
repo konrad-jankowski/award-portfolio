@@ -26,8 +26,10 @@ export default function LocaleLayout({
 }>) {
 	return (
 		<html lang={locale} suppressHydrationWarning>
-			<body className={`${michroma.className} ${roboto.variable}`}>
-				<CustomCursor />
+			<body
+				className={`${michroma.className} ${roboto.variable} selection:bg-colorText selection:text-colorBackground`}
+			>
+				{/* <CustomCursor /> */}
 				<Providers>
 					<div className="relative">
 						<Navbar />
