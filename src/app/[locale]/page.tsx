@@ -12,7 +12,7 @@ export default function Home() {
 		<main className="">
 			<SectionHero />
 			{/* <SectionTest /> */}
-			<SectionScroll />
+			{/* <SectionScroll /> */}
 			<SectionAbout />
 			<SectionFeatuedProjects />
 			<SectionContact />

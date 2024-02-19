@@ -53,7 +53,7 @@ export const HeroHeading = () => {
 	}, {});
 
 	return (
-		<div className=" relative flex flex-col items-center gap-5 text-center">
+		<div className=" relative flex flex-col items-center gap-4 text-center">
 			<div className="fixed inset-0 flex items-center justify-center">
 				<div className="">
 					<div className="h-[600px] w-[600px] rounded-full bg-gradient-to-b from-white/10 from-[14%] to-transparent to-[62%]"></div>
