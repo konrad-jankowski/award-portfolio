@@ -61,22 +61,22 @@ export const HeroHeading = () => {
 			</div>
 			<div className="text-container">
 				<p
-					className="animate-text inline-flex items-center gap-6 text-8xl tracking-wider text-colorText"
+					className="animate-text inline-flex items-center gap-6 text-9xl font-bold tracking-wider text-colorText"
 					style={{ opacity: 0 }}
 				>
-					<span className="h-6 w-6 rounded-full bg-colorText" /> HELLO
+					<span className="h-6 w-6 rounded-full bg-colorText" /> Hello
 					<span className="h-6 w-6 rounded-full bg-colorText" />
 				</p>
 				<br />
 				<p
-					className="stroked animate-text inline-flex items-center gap-6 text-center text-8xl font-bold text-colorText"
+					className="stroked animate-text inline-flex items-center gap-6 py-8 text-center text-9xl font-bold text-colorText"
 					style={{ opacity: 0 }}
 				>
-					I AM
+					MY NAME IS
 				</p>
 				<br />
 				<p
-					className="animate-text  inline-flex items-center gap-6 text-center text-8xl text-colorText"
+					className="animate-text  inline-flex items-center gap-6 text-center text-8xl font-bold tracking-wider text-colorText"
 					style={{ opacity: 0 }}
 				>
 					Konrad

@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
+import { useGSAP } from "@gsap/react";
+import SplitTextJS from "split-text-js";
 
 export const SectionScroll = () => {
 	const sectionRef = useRef(null);
@@ -11,14 +13,14 @@ export const SectionScroll = () => {
 
 	gsap.registerPlugin(ScrollTrigger);
 
-	useEffect(() => {
+	useGSAP(() => {
 		const pin = gsap.fromTo(
 			sectionRef.current,
 			{
 				translateX: 0,
 			},
 			{
-				translateX: "-300vw",
+				translateX: "-200vw",
 				ease: "none",
 				duration: 1,
 				scrollTrigger: {
@@ -36,43 +38,75 @@ export const SectionScroll = () => {
 		};
 	}, []);
 
+	useGSAP(() => {
+		const titles = gsap.utils.toArray(".stack");
+		const tl = gsap.timeline({ repeat: -1 });
+		titles.forEach((title) => {
+			const splitTitle = new SplitTextJS(title);
+			tl.from(
+				splitTitle.chars,
+				{
+					opacity: 0,
+					y: 80,
+					rotateX: -90,
+					stagger: 0.05,
+				},
+				"<",
+			).to(
+				splitTitle.chars,
+				{
+					opacity: 0,
+					y: -80,
+					rotateX: 90,
+				},
+				"<1",
+			);
+		});
+	}, []);
+
 	return (
 		<section className="scroll-section-outer overflow-hidden bg-colorBackground text-colorText">
 			<div ref={triggerRef}>
 				<div
 					ref={sectionRef}
-					className="scroll-section-inner relative flex h-screen w-[400vw] flex-row "
+					className="scroll-section-inner relative flex h-screen w-[300vw] flex-row "
 				>
 					<div className="scroll-section h-scroll flex w-screen flex-col items-center justify-center gap-8">
-						<h3 className="text-7xl">Now i will tell you my story ...</h3>
-					</div>
-					<div className="scroll-section h-scroll flex w-screen flex-col items-center justify-center gap-8">
-						<h3 className="text-7xl">My Name is Konrad</h3>
-						<p className="max-w-4xl text-2xl">
-							As Konrad grew, so did his ambitions. He ventured into the realm of technology, where
-							he found his true calling. Konrad wasn't just any tech enthusiast; he was a pioneer, a
-							creator whose ideas sparked revolutions. He developed a groundbreaking platform that
-							transformed how people interacted with digital content, making it more immersive, more
-							engaging, and infinitely more meaningful. His name became synonymous with innovation,
-							a beacon of progress in the digital age.
-						</p>
-					</div>
-					<div className="scroll-section h-scroll flex w-screen flex-col items-center justify-center gap-8">
-						<h3 className="max-w-4xl text-4xl">
-							Konrad's life was a testament to the power of dreams and determination. He traveled
-							the world, sharing his vision and inspiring others to chase their own dreams. He faced
-							challenges and setbacks, but they only fueled his drive to push the boundaries of what
-							was possible. His story wasn't just about the technology he created; it was about the
-							lives he touched, the communities he built, and the legacy he left behind.
+						<h3 className="text-7xl">I am a web developer</h3>
+						<h3 className="max-w-[70%] text-center font-secondary text-6xl opacity-80 ">
+							my mission is to help grow your biznes and make it visible online.
 						</h3>
 					</div>
-					<div className="scroll-section h-scroll flex w-screen flex-col items-center justify-center gap-8">
-						<h3 className="max-w-4xl text-4xl">
-							Konrad's tale is a beacon for all dreamers, a narrative of aspiration, innovation, and
-							the indomitable human spirit. In the sprawling canvas of the universe, his story is a
-							vivid stroke of brilliance, a testament to what we can achieve when we dare to dream
-							big and never stop believing in the power of our own potential.
-						</h3>
+					<div className="scroll-section h-scroll flex w-screen items-center justify-center gap-10 pb-20 ">
+						<div>
+							<Image
+								className="object-contain "
+								src="/projects/razer-store/razer.png"
+								width={600}
+								height={600}
+								alt=""
+							/>
+						</div>
+						<div className="max-w-lg ">
+							<h3 className="font-secondary text-3xl">
+								I develop clean and modern web apps using the latest technologies. I pay attention
+								for details and suit clients needs.
+							</h3>
+						</div>
+					</div>
+					<div className="scroll-section h-scroll flex w-screen items-center justify-center gap-10 pb-20 ">
+						<div className="px-20 text-center">
+							<p className="font-secondary text-7xl font-semibold">
+								Mostly useded techstack by me:
+							</p>
+							<ul className="pt-28 text-center text-5xl font-semibold uppercase">
+								<li className="stack leading-[0] tracking-wide">React/NextJs</li>
+								<li className="stack leading-[0] tracking-wide">CSS/SASS/Tailwind</li>
+								<li className="stack leading-[0] tracking-wide">Wordpress/Php</li>
+								<li className="stack leading-[0] tracking-wide">Javascript/Typescript</li>
+								<li className="stack leading-[0] tracking-wide">Strapi/Nodejs</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

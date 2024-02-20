@@ -1,13 +1,29 @@
-import { Link } from "@/navigation";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import { Link } from "@/navigation";
 
-export const Project = () => {
+type ProjectProps = {
+	name: string;
+	category: string;
+	featuredImg: string;
+	responsibility: string[];
+	dateOfBuild: number;
+	link: string;
+};
+
+export const Project = ({
+	category,
+	dateOfBuild,
+	name,
+	featuredImg,
+	responsibility,
+	link,
+}: ProjectProps) => {
 	return (
 		<div className=" rounded-3xl border-t border-colorText/50 text-colorText">
 			<div className="my-8 ml-6 flex items-center justify-between gap-10">
-				<h4 className="text-xl font-medium">Nieruchomości.pl</h4>
-				<Link href="/" className="mr-6 flex items-center gap-5">
+				<h4 className="text-xl font-medium">{name}</h4>
+				<Link href={link} className="mr-6 flex items-center gap-5">
 					View project{" "}
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +45,7 @@ export const Project = () => {
 			<Link href="/">
 				<div className="relative h-[26rem] w-full overflow-hidden rounded-3xl ">
 					<Image
-						src="/project.png"
+						src={featuredImg}
 						className="rounded-3xl object-cover transition-transform duration-500 hover:scale-110"
 						fill
 						alt="project"
@@ -37,9 +53,17 @@ export const Project = () => {
 				</div>
 			</Link>
 			<div className="my-6 flex justify-end gap-4">
-				<div className="rounded-full border px-4 py-1 uppercase">design</div>
-				<div className="rounded-full border px-4 py-1 uppercase">develop</div>
-				<div className="rounded-full border bg-white px-4 py-1 uppercase text-black">2023</div>
+				{responsibility.map((item) => (
+					<div
+						key={item}
+						className="rounded-full border border-colorText  px-4 py-1 uppercase text-colorText"
+					>
+						{item}
+					</div>
+				))}
+				<div className="rounded-full border bg-colorText px-4 py-1 uppercase text-colorBackground">
+					{dateOfBuild}
+				</div>
 			</div>
 		</div>
 	);
