@@ -56,12 +56,12 @@ export const HeroHeading = () => {
 		<div className=" relative flex flex-col items-center gap-4 text-center">
 			<div className="fixed inset-0 flex items-center justify-center">
 				<div className="">
-					<div className="h-[600px] w-[600px] rounded-full bg-gradient-to-b from-white/10 from-[14%] to-transparent to-[62%]"></div>
+					<div className="h-80 w-80 rounded-full bg-gradient-to-b from-white/10 from-[14%] to-transparent to-[62%] lg:h-[600px] lg:w-[600px]"></div>
 				</div>
 			</div>
 			<div className="text-container">
 				<p
-					className="animate-text inline-flex items-center gap-6 text-9xl font-bold tracking-wider text-colorText"
+					className="animate-text inline-flex items-center gap-6 text-5xl font-bold tracking-wider text-colorText lg:text-9xl"
 					style={{ opacity: 0 }}
 				>
 					<span className="h-6 w-6 rounded-full bg-colorText" /> Hello
@@ -69,14 +69,14 @@ export const HeroHeading = () => {
 				</p>
 				<br />
 				<p
-					className="stroked animate-text inline-flex items-center gap-6 py-8 text-center text-9xl font-bold text-colorText"
+					className="stroked animate-text inline-flex items-center gap-6 py-8 text-center text-5xl font-bold text-colorText lg:text-9xl"
 					style={{ opacity: 0 }}
 				>
 					MY NAME IS
 				</p>
 				<br />
 				<p
-					className="animate-text  inline-flex items-center gap-6 text-center text-8xl font-bold tracking-wider text-colorText"
+					className="animate-text  inline-flex items-center gap-6 text-center text-4xl font-bold tracking-wider text-colorText lg:text-8xl"
 					style={{ opacity: 0 }}
 				>
 					Konrad

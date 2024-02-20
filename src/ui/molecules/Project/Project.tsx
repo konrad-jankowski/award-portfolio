@@ -21,9 +21,9 @@ export const Project = ({
 }: ProjectProps) => {
 	return (
 		<div className=" rounded-3xl border-t border-colorText/50 text-colorText">
-			<div className="my-8 ml-6 flex items-center justify-between gap-10">
-				<h4 className="text-xl font-medium">{name}</h4>
-				<Link href={link} className="mr-6 flex items-center gap-5">
+			<div className="my-8 ml-6 flex items-center justify-between gap-10 font-secondary">
+				<h4 className="text-lg font-medium lg:text-xl">{name}</h4>
+				<Link href={link} className="mr-6 flex items-center gap-3 text-lg lg:gap-5">
 					View project{" "}
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -52,11 +52,11 @@ export const Project = ({
 					/>
 				</div>
 			</Link>
-			<div className="my-6 flex justify-end gap-4">
+			<div className="my-6 flex flex-wrap justify-end gap-4 font-secondary text-base lg:text-lg">
 				{responsibility.map((item) => (
 					<div
 						key={item}
-						className="rounded-full border border-colorText  px-4 py-1 uppercase text-colorText"
+						className="rounded-full border border-colorText px-4 py-1 uppercase text-colorText"
 					>
 						{item}
 					</div>

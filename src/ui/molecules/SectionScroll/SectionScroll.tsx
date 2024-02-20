@@ -49,7 +49,7 @@ export const SectionScroll = () => {
 					opacity: 0,
 					y: 80,
 					rotateX: -90,
-					stagger: 0.05,
+					stagger: 0.03,
 				},
 				"<",
 			).to(
@@ -72,8 +72,8 @@ export const SectionScroll = () => {
 					className="scroll-section-inner relative flex h-screen w-[300vw] flex-row "
 				>
 					<div className="scroll-section h-scroll flex w-screen flex-col items-center justify-center gap-8">
-						<h3 className="text-7xl">I am a web developer</h3>
-						<h3 className="max-w-[70%] text-center font-secondary text-6xl opacity-80 ">
+						<h3 className="text-3xl lg:text-7xl">I am a web developer</h3>
+						<h3 className="max-w-[70%] text-center font-secondary text-2xl opacity-80 lg:text-6xl ">
 							my mission is to help grow your biznes and make it visible online.
 						</h3>
 					</div>
@@ -88,7 +88,7 @@ export const SectionScroll = () => {
 							/>
 						</div>
 						<div className="max-w-lg ">
-							<h3 className="font-secondary text-3xl">
+							<h3 className="font-secondary text-xl lg:text-3xl">
 								I develop clean and modern web apps using the latest technologies. I pay attention
 								for details and suit clients needs.
 							</h3>
@@ -96,10 +96,10 @@ export const SectionScroll = () => {
 					</div>
 					<div className="scroll-section h-scroll flex w-screen items-center justify-center gap-10 pb-20 ">
 						<div className="px-20 text-center">
-							<p className="font-secondary text-7xl font-semibold">
+							<p className="font-secondary text-4xl font-semibold lg:text-7xl">
 								Mostly useded techstack by me:
 							</p>
-							<ul className="pt-28 text-center text-5xl font-semibold uppercase">
+							<ul className="pt-28 text-center text-2xl font-semibold uppercase lg:text-5xl">
 								<li className="stack leading-[0] tracking-wide">React/NextJs</li>
 								<li className="stack leading-[0] tracking-wide">CSS/SASS/Tailwind</li>
 								<li className="stack leading-[0] tracking-wide">Wordpress/Php</li>
