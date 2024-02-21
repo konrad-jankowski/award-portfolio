@@ -1,51 +1,11 @@
 {
-	"Navbar": {
-		"about-me": "o mnie",
-		"portfolio": "Projekty",
-		"services": "usługi",
-		"blog": "blog",
-		"contact": "kontakt"
+	"Hero": {
+		"hello": "Cześć",
+		"intro": "NAZYWAM SIĘ"
 	},
-	"Hero Section": {
-		"welcome": "Witaj świecie!",
-		"heading": "Tworzę strony internetowe z pasją, łącząc elegancję wizualną z praktycznym zastosowaniem.",
-		"profession": "Fullstack developer"
-	},
-	"About Section": {
-		"about": "Dążę do dokładnego poznania specyfiki Twojej firmy i jej celów. Posiadając taką wiedzę, jestem w stanie opracować unikalną strategię oraz zaprojektować stronę internetową, która nie tylko odzwierciedla wyjątkowość Twojego przedsiębiorstwa w przestrzeni cyfrowej, ale również wspierarealizację Twoich celów biznesowych."
-	},
-	"Technologies Section": {
-		"heading": "Technologie",
-		"heading-span": "z których korzystam:"
-	},
-	"FAQ Section": {
-		"heading": "Najczęściej zadawane",
-		"heading-span": "pytania?",
-		"faq": [
-			{
-				"question": "Co to jest web development?",
-				"answer": "Web development to proces tworzenia stron internetowych i aplikacji internetowych. Obejmuje zarówno aspekty techniczne, takie jak programowanie i kodowanie, jak i kreatywne, w tym projektowanie UI/UX."
-			},
-			{
-				"question": "Jakie technologie są używane w web development?",
-				"answer": "W web development stosuje się różne technologie, w tym języki programowania takie jak HTML, CSS, JavaScript, oraz różne frameworki i biblioteki, takie jak React, Angular, Vue.js czy Node.js."
-			},
-			{
-				"question": "Ile czasu zajmuje stworzenie strony internetowej?",
-				"answer": "Czas potrzebny na stworzenie strony internetowej zależy od wielu czynników, w tym od złożoności projektu, funkcjonalności, a także od doświadczenia i zasobów zespołu deweloperskiego."
-			},
-			{
-				"question": "Jakie są najlepsze praktyki w web development?",
-				"answer": "Do najlepszych praktyk należą: tworzenie responsywnych stron, optymalizacja pod kątem wyszukiwarek (SEO), zapewnienie bezpieczeństwa, regularne testowanie i aktualizacje oraz skupienie się na użytkowniku i jego doświadczeniach."
-			},
-			{
-				"question": "Czy mogę samodzielnie zarządzać swoją stroną po jej uruchomieniu?",
-				"answer": "Tak, wiele platform i systemów zarządzania treścią (CMS) umożliwia łatwe zarządzanie treścią na stronie bez potrzeby zaawansowanej wiedzy technicznej."
-			},
-			{
-				"question": "Jakie są koszty stworzenia strony internetowej?",
-				"answer": "Koszty są różne i zależą od wielu czynników, takich jak złożoność projektu, funkcjonalności, użyte technologie oraz doświadczenie zespołu deweloperskiego."
-			}
-		]
+	"About": {
+		"heading": "Moje usługi",
+		"what-i-do": "Co robię",
+		"what-i-do-description": "Skupiam się na web developmencie oraz rzeczach powiązanych takich jak design."
 	}
 }

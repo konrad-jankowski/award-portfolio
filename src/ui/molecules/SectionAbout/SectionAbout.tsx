@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { SectionHeading } from "@/ui/atoms/SectionHeading/SectionHeading";
@@ -17,19 +16,22 @@ const iDo = [
 	{ title: "Coding figma layouts", description: "" },
 ];
 
-export const SectionAbout = () => {
+type SectionAboutProps = {
+	heading: string;
+	whatIdo: string;
+	whatIdoDescription: string;
+};
+
+export const SectionAbout = ({ heading, whatIdo, whatIdoDescription }: SectionAboutProps) => {
 	return (
 		<section className="h-fit w-full bg-colorBackground px-10 pb-20 text-colorText lg:px-28">
-			<SectionHeading title="Services" />
+			<SectionHeading title={heading} />
 			<div className="relative z-50 mt-20 flex flex-col justify-between gap-6 font-secondary lg:flex-row lg:gap-0 ">
 				<div className="w-full flex-1">
 					<h3 className="mb-6 w-full text-4xl font-bold uppercase tracking-wide lg:text-7xl">
-						What i do.
+						{whatIdo}.
 					</h3>
-					<p className=" max-w-md text-lg lg:text-2xl">
-						I focus on a web development and services related to it like design animations and much
-						more.
-					</p>
+					<p className=" max-w-md text-lg lg:text-2xl">{whatIdoDescription}.</p>
 				</div>
 				<div className="flex flex-1 flex-col gap-8 ">
 					{iDo.map((item) => {

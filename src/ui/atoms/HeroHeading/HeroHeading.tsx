@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-export const HeroHeading = () => {
+export const HeroHeading = ({ hello, intro }: { hello: string; intro: string }) => {
 	const [role, setRole] = useState("WEB DEVELOPER");
 	const roles = ["WEB DEVELOPER", "FRONT END DEVELOPER", "BACK END DEVELOPER"];
 
@@ -53,13 +53,13 @@ export const HeroHeading = () => {
 	}, {});
 
 	return (
-		<div className=" relative flex flex-col items-center gap-4 text-center">
+		<div className=" relative z-50 flex flex-col items-center gap-4 text-center">
 			<div className="text-container">
 				<p
 					className="animate-text inline-flex items-center gap-6 text-5xl font-bold tracking-wider text-colorText lg:text-9xl"
 					style={{ opacity: 0 }}
 				>
-					<span className="h-6 w-6 rounded-full bg-colorText" /> Hello
+					<span className="h-6 w-6 rounded-full bg-colorText" /> {hello}
 					<span className="h-6 w-6 rounded-full bg-colorText" />
 				</p>
 				<br />
@@ -67,7 +67,7 @@ export const HeroHeading = () => {
 					className="stroked animate-text inline-flex items-center gap-6 py-8 text-center text-5xl font-bold text-colorText lg:text-9xl"
 					style={{ opacity: 0 }}
 				>
-					MY NAME IS
+					{intro}
 				</p>
 				<br />
 				<p
