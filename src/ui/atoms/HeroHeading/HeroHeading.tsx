@@ -54,11 +54,6 @@ export const HeroHeading = () => {
 
 	return (
 		<div className=" relative flex flex-col items-center gap-4 text-center">
-			<div className="fixed inset-0 flex items-center justify-center">
-				<div className="">
-					<div className="h-80 w-80 rounded-full bg-gradient-to-b from-white/10 from-[14%] to-transparent to-[62%] lg:h-[600px] lg:w-[600px]"></div>
-				</div>
-			</div>
 			<div className="text-container">
 				<p
 					className="animate-text inline-flex items-center gap-6 text-5xl font-bold tracking-wider text-colorText lg:text-9xl"
