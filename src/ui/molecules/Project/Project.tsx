@@ -20,7 +20,7 @@ export const Project = ({
 	link,
 }: ProjectProps) => {
 	return (
-		<div className=" rounded-3xl border-t border-colorText/50 text-colorText">
+		<div className="rounded-3xl border-t border-colorText/50 text-colorText">
 			<div className="my-8 ml-6 flex items-center justify-between gap-10 font-secondary">
 				<h4 className="text-lg font-medium lg:text-xl">{name}</h4>
 				<Link href={link} className="mr-6 flex items-center gap-3 text-lg lg:gap-5">
@@ -43,7 +43,7 @@ export const Project = ({
 				</Link>
 			</div>
 			<Link href="/">
-				<div className="relative h-[26rem] w-full overflow-hidden rounded-3xl ">
+				<div className="relative h-60 w-full overflow-hidden rounded-3xl lg:h-[26rem] ">
 					<Image
 						src={featuredImg}
 						className="rounded-3xl object-cover transition-transform duration-500 hover:scale-110"

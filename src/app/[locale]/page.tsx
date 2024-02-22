@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { BackgroundCircle } from "@/ui/atoms/BackgroundCircle";
 import { ContactButton } from "@/ui/atoms/ContactButton";
 import { LanguageSwitcher } from "@/ui/atoms/LanguageSwitcher";
@@ -6,7 +7,6 @@ import { SectionHero } from "@/ui/molecules/SectionHero/SectionHero";
 import { SectionScroll } from "@/ui/molecules/SectionScroll/SectionScroll";
 import { SectionContact } from "@/ui/organisms/SectionContact/SectionContact";
 import { SectionFeatuedProjects } from "@/ui/organisms/SectionFeatuedProjects/SectionFeatuedProjects";
-import { useTranslations } from "next-intl";
 
 export default function Home() {
 	const about = useTranslations("About");

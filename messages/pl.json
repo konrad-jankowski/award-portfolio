@@ -1,11 +1,19 @@
 {
 	"Hero": {
 		"hello": "Cześć",
-		"intro": "NAZYWAM SIĘ"
+		"intro": "JESTEM"
 	},
 	"About": {
 		"heading": "Moje usługi",
 		"what-i-do": "Co robię",
 		"what-i-do-description": "Skupiam się na web developmencie oraz rzeczach powiązanych takich jak design."
+	},
+	"Projects": {
+		"heading": "Wybrane projekty"
+	},
+	"Contact": {
+		"question": "Chcesz porozmaiwać o swoim projekcie?",
+		"get-in": "Skontaktuj się ze mną",
+		"credentials": "© 2024 Konrad Jankowski | Wszystkie prawa zastrzeżone."
 	}
 }

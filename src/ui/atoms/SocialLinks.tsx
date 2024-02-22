@@ -15,7 +15,7 @@ export const SocialLinks = () => {
 				<Link
 					href="/"
 					key={link.name}
-					className=" flex h-20 w-full items-center justify-center rounded-3xl bg-colorText/10 text-colorText"
+					className="social-links flex h-20 w-full items-center justify-center rounded-3xl bg-colorText/10 text-colorText  "
 				>
 					<link.Icon size={26} />
 				</Link>

@@ -27,7 +27,7 @@ export default function LocaleLayout({
 	return (
 		<html lang={locale} suppressHydrationWarning>
 			<body
-				className={`${michroma.className} ${roboto.variable} selection:bg-colorText selection:text-colorBackground`}
+				className={`${michroma.className} ${roboto.variable} bg-colorBackground selection:bg-colorText selection:text-colorBackground`}
 			>
 				{/* <CustomCursor /> */}
 				<Providers>

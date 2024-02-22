@@ -1,6 +1,7 @@
 import React from "react";
 import { SectionHeading } from "@/ui/atoms/SectionHeading/SectionHeading";
 import { Project } from "@/ui/molecules/Project/Project";
+import { useTranslations } from "next-intl";
 
 const projects = [
 	{
@@ -22,10 +23,12 @@ const projects = [
 ];
 
 export const SectionFeatuedProjects = () => {
+	const t = useTranslations("Projects");
+
 	return (
 		<section className="section-projects h-fit w-full bg-colorBackground px-10 pb-10 lg:p-section">
-			<SectionHeading title="Recent projects" />
-			<div className="relative z-50 mt-20 grid grid-cols-1 gap-7 lg:grid-cols-2 lg:gap-14">
+			<SectionHeading title={t("heading")} />
+			<div className="relative z-50 mt-14 grid grid-cols-1 gap-7 lg:mt-20 lg:grid-cols-2 lg:gap-14">
 				{projects.map((project) => {
 					return (
 						<Project

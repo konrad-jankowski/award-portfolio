@@ -7,5 +7,13 @@
 		"heading": "services",
 		"what-i-do": "What i do",
 		"what-i-do-description": "I focus on a web development and services related to it like design animations and much more."
+	},
+	"Projects": {
+		"heading": "Featured projects"
+	},
+	"Contact": {
+		"question": "Got a project? Need an unfair advantage?",
+		"get-in": "GET IN TOUCH",
+		"credentials": "© 2024 Konrad Jankowski | All Rights Reserved."
 	}
 }
