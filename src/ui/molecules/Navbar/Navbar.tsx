@@ -1,15 +1,13 @@
 import { twMerge } from "tailwind-merge";
 import { Menu } from "./Menu";
 import { DarkModeSwitcher } from "@/ui/atoms/DarkModeSwitcher";
+import { Logo } from "@/ui/atoms/Logo";
 
 export const Navbar = () => {
 	return (
-		<nav className="fixed left-0 right-0 top-0 z-[999] flex h-28 w-full items-center justify-between  px-10 text-colorText">
-			<div className="logo z-50 text-center font-bold">
-				<div className="tracking-wider ">Konrad_Jankowski</div>
-				<div className="text-xs tracking-widest">{"< web developer />"}</div>
-			</div>
-			<ul className="flex items-center gap-4">
+		<nav className="fixed left-0 right-0 top-0 z-[999] flex h-20 w-full items-center justify-between px-6 text-colorText  lg:h-24 lg:p-section">
+			<Logo />
+			<ul className="flex items-center lg:gap-4">
 				<li>
 					<DarkModeSwitcher />
 				</li>

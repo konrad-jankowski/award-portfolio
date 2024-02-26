@@ -32,23 +32,6 @@ export const Menu = () => {
 				delay: 0.1,
 			});
 
-			// tl.to(
-			// 	".logo",
-			// 	0.2,
-			// 	{
-			// 		color: "red",
-			// 	},
-			// 	"-=0.1",
-			// );
-
-			tl.from(".social-links-wrapper > .social-links", 0.4, {
-				opacity: 0,
-				y: 20,
-				stagger: {
-					amount: 0.04,
-				},
-			});
-
 			tl.to(
 				".nav-link > a",
 				0.8,
@@ -61,6 +44,23 @@ export const Menu = () => {
 				},
 				"-=0.4",
 			);
+
+			tl.from(
+				".nav-footer",
+				0.3,
+				{
+					opacity: 0,
+				},
+				"-=0.5",
+			).reverse();
+
+			tl.from(".nav-footer > .social-links", 0.4, {
+				opacity: 0,
+				y: 20,
+				stagger: {
+					amount: 0.04,
+				},
+			});
 		}
 	}, []);
 
@@ -78,7 +78,7 @@ export const Menu = () => {
 					);
 				})}
 			</div>
-			<div className="social-links-wrapper absolute bottom-20 mx-auto  grid w-full grid-cols-4 gap-3 px-6 lg:gap-4 lg:px-20">
+			<div className="nav-footer absolute bottom-20 mx-auto  grid w-full grid-cols-4 gap-3 px-6 lg:gap-4 lg:px-20">
 				<SocialLinks />
 			</div>
 		</div>

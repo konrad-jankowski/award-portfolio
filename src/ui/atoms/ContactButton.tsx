@@ -1,6 +1,6 @@
 export const ContactButton = () => {
 	return (
-		<div className="group fixed bottom-10 right-10 z-50 flex cursor-pointer items-center overflow-hidden rounded-md bg-colorText/20 font-secondary text-colorText transition-all duration-300 ">
+		<div className="group fixed bottom-10 right-10 z-50 flex cursor-pointer items-center overflow-hidden rounded-md bg-colorText/20 font-secondary text-colorText backdrop-blur-lg transition-all duration-300 ">
 			<div className="flex items-center justify-center rounded-md p-3 group-hover:bg-colorText/70 group-hover:p-5 group-hover:text-colorBackground">
 				<svg
 					width="24"

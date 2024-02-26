@@ -12,7 +12,7 @@ export const DarkModeSwitcher = () => {
 	return (
 		<button
 			onClick={resolvedTheme === "dark" ? () => setTheme("light") : () => setTheme("dark")}
-			className="mr-9 h-9 w-9 rounded-full border-2 border-colorText bg-gradient-to-r from-colorBackground from-50% to-colorText to-50%"
+			className="mr-7 h-7 w-7 rounded-full border-2 border-colorText bg-gradient-to-r from-colorBackground from-50% to-colorText to-50% lg:mr-9 lg:h-9 lg:w-9"
 		></button>
 	);
 };

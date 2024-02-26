@@ -41,7 +41,7 @@ export const SectionAbout = ({ heading, whatIdo, whatIdoDescription }: SectionAb
 	};
 
 	return (
-		<section className="h-fit w-full bg-colorBackground px-10 pb-20 text-colorText lg:px-28">
+		<section className="h-fit w-full bg-colorBackground px-6 pb-20 text-colorText lg:px-28">
 			<SectionHeading title={heading} />
 			<div className="relative z-50 mt-14 flex flex-col justify-between gap-6 font-secondary lg:mt-20 lg:flex-row lg:gap-0 ">
 				<div className="w-full flex-1">
