@@ -6,7 +6,25 @@
 	"About": {
 		"heading": "services",
 		"what-i-do": "What i do",
-		"what-i-do-description": "I focus on a web development and services related to it like design animations and much more."
+		"what-i-do-description": "I focus on a web development and services related to it like design animations and much more.",
+		"faq": [
+			{
+				"question": "Web development",
+				"answer": "The process of creating websites and web applications. It includes designing user interfaces, front-end and back-end programming, as well as database management."
+			},
+			{
+				"question": "Wordpress development",
+				"answer": "A specialization in developing and customizing websites using the WordPress content management system. It covers creating themes, plugins, and optimizing performance."
+			},
+			{
+				"question": "Headless CMS",
+				"answer": "A modern approach to content management that separates the presentation layer (front-end) from the content management layer (back-end). It allows for easy integration with various front-end technologies."
+			},
+			{
+				"question": "Coding figma layouts",
+				"answer": "The process of converting graphic designs made in Figma into HTML, CSS, and JavaScript code. It enables the precise reproduction of designed user interfaces into functioning websites."
+			}
+		]
 	},
 	"Projects": {
 		"heading": "Featured projects"

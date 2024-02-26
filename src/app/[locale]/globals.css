@@ -13,7 +13,12 @@
 	--color-background: 227 227 227;
 	--color-text: 28 31 36;
 }
-
+.section2 {
+	background: blue;
+}
+.section1 {
+	background: purple;
+}
 .t-unset {
 	top: unset;
 }

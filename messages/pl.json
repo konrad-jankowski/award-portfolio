@@ -6,7 +6,25 @@
 	"About": {
 		"heading": "Moje usługi",
 		"what-i-do": "Co robię",
-		"what-i-do-description": "Skupiam się na web developmencie oraz rzeczach powiązanych takich jak design."
+		"what-i-do-description": "Skupiam się na web developmencie oraz rzeczach powiązanych takich jak design.",
+		"faq": [
+			{
+				"question": "Web development",
+				"answer": "Proces tworzenia stron internetowych i aplikacji webowych. Obejmuje projektowanie interfejsów użytkownika, programowanie front-end i back-end, a także zarządzanie bazami danych."
+			},
+			{
+				"question": "Wordpress development",
+				"answer": "Specjalizacja w tworzeniu i dostosowywaniu stron internetowych przy użyciu systemu zarządzania treścią WordPress. Obejmuje tworzenie motywów, wtyczek i optymalizację wydajności."
+			},
+			{
+				"question": "Headless CMS",
+				"answer": "Nowoczesne podejście do zarządzania treścią, które oddziela warstwę prezentacji (front-end) od warstwy zarządzania treścią (back-end). Umożliwia łatwą integrację z różnymi technologiami front-endowymi."
+			},
+			{
+				"question": "Kodowanie layotów z Figmy",
+				"answer": "Proces konwersji projektów graficznych wykonanych w Figma na kod HTML, CSS i JavaScript. Umożliwia dokładne odtworzenie zaprojektowanych interfejsów użytkownika na funkcjonujących stronach internetowych."
+			}
+		]
 	},
 	"Projects": {
 		"heading": "Wybrane projekty"
