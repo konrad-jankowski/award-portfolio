@@ -1,20 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export const HeroHeading = ({ hello, intro }: { hello: string; intro: string }) => {
-	const [role, setRole] = useState("WEB DEVELOPER");
-	const roles = ["WEB DEVELOPER", "FRONT END DEVELOPER", "BACK END DEVELOPER"];
-
 	if (typeof window !== "undefined") {
 		gsap.registerPlugin(ScrollTrigger, useGSAP);
 	}
 
 	useGSAP(() => {
-		// Animacja początkowa
 		gsap.to(".animate-text", {
 			duration: 1,
 			opacity: 1,
@@ -22,20 +17,6 @@ export const HeroHeading = ({ hello, intro }: { hello: string; intro: string }) 
 			stagger: 0.2,
 			ease: "power2.out",
 		});
-
-		// Ustawienie interwału do zmiany roli
-		const interval = setInterval(() => {
-			setRole((currentRole) => {
-				const currentIndex = roles.indexOf(currentRole);
-				const nextIndex = (currentIndex + 1) % roles.length;
-				return roles[nextIndex];
-			});
-
-			// Ponowne animowanie tekstu po zmianie
-			gsap.fromTo(".role", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1 });
-		}, 3000); // Zmiana co 3 sekundy
-
-		return () => clearInterval(interval); // Czyszczenie interwału przy demontażu komponentu
 	}, []);
 
 	useGSAP(() => {
@@ -46,7 +27,6 @@ export const HeroHeading = ({ hello, intro }: { hello: string; intro: string }) 
 				trigger: ".text-container",
 				start: "-100rem 10rem",
 				end: "center",
-				// toggleActions: "restart pouse reverse pouse",
 				scrub: 1,
 			},
 		});

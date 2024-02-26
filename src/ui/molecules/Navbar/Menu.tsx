@@ -61,15 +61,6 @@ export const Menu = () => {
 				},
 				"-=0.4",
 			);
-
-			tl.from(
-				".nav-footer",
-				0.3,
-				{
-					opacity: 0,
-				},
-				"-=0.5",
-			).reverse();
 		}
 	}, []);
 
