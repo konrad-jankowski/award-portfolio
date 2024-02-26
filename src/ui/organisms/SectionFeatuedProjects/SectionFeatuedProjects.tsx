@@ -1,12 +1,13 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/ui/atoms/SectionHeading/SectionHeading";
 import { Project } from "@/ui/molecules/Project/Project";
-import { useTranslations } from "next-intl";
 
 const projects = [
 	{
 		name: "Razer E-commerce",
-		link: "/razer-store",
+		link: "https://razer-store-ten.vercel.app/",
+		githubLink: "https://github.com/konrad-jankowski/razer-store.git",
 		category: "e-commerce",
 		featuredImg: "/projects/razer-store/featured.png",
 		responsibility: ["develop"],
@@ -14,11 +15,30 @@ const projects = [
 	},
 	{
 		name: "Levarde",
-		link: "/leavrde",
+		link: "https://levarde.com/",
 		category: "e-commerce",
 		featuredImg: "/projects/levarde/featured.png",
-		responsibility: ["develop", "design", "deploy"],
+		responsibility: ["develop", "design"],
 		dateOfBuild: 2023,
+		githubLink: "",
+	},
+	{
+		name: "Fajne chatki",
+		link: "https://cool-houses.vercel.app/",
+		githubLink: "https://github.com/konrad-jankowski/cool-houses.git",
+		category: "landing-page",
+		featuredImg: "/projects/cool-houses/featured.png",
+		responsibility: ["develop"],
+		dateOfBuild: 2023,
+	},
+	{
+		name: "Fox-dev",
+		link: "https://fox-dev-eight.vercel.app/pl/blog",
+		githubLink: "https://github.com/konrad-jankowski/FoxDev",
+		category: "agency-website",
+		featuredImg: "/projects/fox-dev/featured.png",
+		responsibility: ["develop", "design"],
+		dateOfBuild: 2024,
 	},
 ];
 
@@ -35,6 +55,7 @@ export const SectionFeatuedProjects = () => {
 							key={project.name}
 							name={project.name}
 							link={project.link}
+							githubLink={project.githubLink}
 							featuredImg={project.featuredImg}
 							responsibility={project.responsibility}
 							category={""}

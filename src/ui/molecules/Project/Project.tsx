@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Github, Info, Link as Link2 } from "lucide-react";
 import { Link } from "@/navigation";
 
 type ProjectProps = {
@@ -9,6 +10,7 @@ type ProjectProps = {
 	responsibility: string[];
 	dateOfBuild: number;
 	link: string;
+	githubLink: string;
 };
 
 export const Project = ({
@@ -18,29 +20,25 @@ export const Project = ({
 	featuredImg,
 	responsibility,
 	link,
+	githubLink,
 }: ProjectProps) => {
 	return (
 		<div className="rounded-3xl border-t border-colorText/50 text-colorText">
-			<div className="my-8 ml-6 flex items-center justify-between gap-10 font-secondary">
-				<h4 className="text-lg font-medium lg:text-xl">{name}</h4>
-				<Link href={link} className="mr-6 flex items-center gap-3 text-lg lg:gap-5">
-					View project{" "}
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="40"
-						height="40"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						strokeWidth="1"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						className="lucide lucide-move-right"
+			<div className="mx-6 my-8 flex items-center justify-between gap-10 font-secondary">
+				<h3 className="text-lg font-semibold lg:text-xl">{name}</h3>
+				<div className="flex items-center ">
+					<a
+						target="_blank"
+						href={githubLink}
+						className="mr-6 flex items-center gap-3 text-lg lg:gap-5"
 					>
-						<path d="M18 8L22 12L18 16" />
-						<path d="M2 12H22" />
-					</svg>
-				</Link>
+						<Github />
+					</a>
+					<a target="_blank" href={link} className="mr-6 flex items-center gap-3 text-lg lg:gap-5">
+						<Link2 />
+					</a>
+					<Info />
+				</div>
 			</div>
 			<Link href="/">
 				<div className="relative h-60 w-full overflow-hidden rounded-3xl lg:h-[26rem] ">
