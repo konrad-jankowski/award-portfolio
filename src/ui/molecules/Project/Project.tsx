@@ -14,7 +14,6 @@ type ProjectProps = {
 };
 
 export const Project = ({
-	category,
 	dateOfBuild,
 	name,
 	featuredImg,
