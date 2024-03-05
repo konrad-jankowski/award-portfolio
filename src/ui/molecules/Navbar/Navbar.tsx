@@ -1,9 +1,18 @@
-import { twMerge } from "tailwind-merge";
+"use client";
+
+import { useState } from "react";
+import { MenuIcon, X } from "lucide-react";
 import { Menu } from "./Menu";
 import { DarkModeSwitcher } from "@/ui/atoms/DarkModeSwitcher";
 import { Logo } from "@/ui/atoms/Logo";
 
-export const Navbar = () => {
+type Link = {
+	title: string;
+	link: string;
+};
+
+export const Navbar = ({ navLinks }: { navLinks: Link[] }) => {
+	const [toggle, setToggle] = useState(false);
 	return (
 		<nav className="fixed left-0 right-0 top-0 z-[999] flex h-20 w-full items-center justify-between px-6 text-colorText  lg:h-24 lg:p-section">
 			<Logo />
@@ -11,18 +20,14 @@ export const Navbar = () => {
 				<li>
 					<DarkModeSwitcher />
 				</li>
-				<div className="menu-toggle">
-					<div id="menu-toggle-btn">
-						<span
-							className={twMerge(
-								"test group absolute top-1/2 inline-block h-0.5 w-8 bg-colorText transition-all duration-300 before:absolute",
-								'before:content-[" "] before:-top-0.5 before:inline-block before:h-[3px] before:w-8 before:-translate-y-2.5 before:bg-colorText before:transition-all before:duration-300 ',
-							)}
-						></span>
-					</div>
+				<div
+					onClick={() => setToggle((prev) => !prev)}
+					className="relative z-50 cursor-pointer text-colorText"
+				>
+					{toggle ? <X size={32} /> : <MenuIcon size={32} />}
 				</div>
 			</ul>
-			<Menu />
+			{toggle && <Menu setToggle={setToggle} toggle={toggle} navLinks={navLinks} />}
 		</nav>
 	);
 };

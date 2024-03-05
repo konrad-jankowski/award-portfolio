@@ -4,81 +4,45 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { SocialLinks } from "@/ui/atoms/SocialLinks";
 
-export const Menu = () => {
-	const links = [
-		{ name: "About", link: "#work" },
-		{ name: "Portfolio", link: "#portfolio" },
-		{ name: "Services", link: "#services" },
-		{ name: "Contact", link: "#contact" },
-	];
+type Link = {
+	title: string;
+	link: string;
+};
 
+export const Menu = ({
+	navLinks,
+	setToggle,
+	toggle,
+}: {
+	navLinks: Link[];
+	setToggle: (toggle: boolean) => void;
+	toggle: boolean;
+}) => {
 	useGSAP(() => {
-		const tl = gsap.timeline({ paused: true });
-
-		function openNav() {
-			animateOpenNav();
-			const navBtn = document.getElementById("menu-toggle-btn");
-			navBtn.onclick = function (e) {
-				navBtn.classList.toggle("active");
-				tl.reversed(!tl.reversed());
-			};
-		}
-
-		openNav();
-
-		function animateOpenNav() {
-			tl.to("#nav-container", 0.2, {
-				autoAlpha: 1,
-				delay: 0.1,
-			});
-
-			tl.to(
+		if (toggle) {
+			gsap.fromTo(
 				".nav-link > a",
-				0.8,
-				{
-					top: 0,
-					ease: "power2.inOut",
-					stagger: {
-						amount: 0.1,
-					},
-				},
-				"-=0.4",
+				{ opacity: 0 },
+				{ opacity: 1, y: 0, stagger: 0.1, ease: "power2.out", duration: 0.4 },
 			);
-
-			tl.from(
-				".nav-footer",
-				0.3,
-				{
-					opacity: 0,
-				},
-				"-=0.5",
-			).reverse();
-
-			tl.from(".nav-footer > .social-links", 0.4, {
-				opacity: 0,
-				y: 20,
-				stagger: {
-					amount: 0.04,
-				},
-			});
 		}
-	}, []);
+	}, [toggle]);
 
 	return (
-		<div id="nav-container" className="bg-[#1c1f24] font-secondary text-[#e3e3e3]">
-			<div className="col mb-14">
-				{links.map((link) => {
+		<div className="fixed left-0 right-0 top-0 flex h-screen w-full flex-col items-center justify-center gap-10 bg-colorBackground px-6 font-secondary text-colorText  lg:p-section">
+			<div className="mb-20 flex flex-col gap-4">
+				{navLinks.map((link) => {
 					return (
-						<div key={link.name} className="nav-link text-colorText hover:text-colorText/70">
-							<a className="hover:opacity-60" href={link.link}>
-								{link.name}
+						<div className="" onClick={() => setToggle(false)} key={link.title}>
+							<a className="text-5xl hover:opacity-60" href={link.link}>
+								{link.title}
 							</a>
-							<div className="duration-100 after:absolute after:left-0 after:top-[60px] after:m-[0_auto] after:h-16 after:w-[500px] after:bg-[#1c1f24] after:content-['']"></div>
+							{/* <div className="duration-100 after:absolute after:left-0 after:top-[60px] after:m-[0_auto] after:h-16 after:w-[500px] after:bg-[#1c1f24] after:content-['']"></div> */}
 						</div>
 					);
 				})}
 			</div>
-			<div className="nav-footer absolute bottom-20 mx-auto  grid w-full grid-cols-4 gap-3 px-6 lg:gap-4 lg:px-20">
+			<div className="grid w-full grid-cols-4 gap-2 lg:gap-6 ">
 				<SocialLinks />
 			</div>
 		</div>

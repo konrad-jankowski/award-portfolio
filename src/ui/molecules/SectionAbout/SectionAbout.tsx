@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { Minus, Plus } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 import { SectionHeading } from "@/ui/atoms/SectionHeading/SectionHeading";
-import { Minus, Plus } from "lucide-react";
 
 type FAQItemType = {
 	question: string;
@@ -34,7 +34,7 @@ export const SectionAbout = ({
 			<SectionHeading title={heading} />
 			<div className="relative z-50 mt-14 flex flex-col justify-between gap-6 font-secondary lg:mt-20 lg:flex-row lg:gap-0 ">
 				<div className="w-full flex-1">
-					<h3 className="mb-6 w-full text-4xl font-bold uppercase tracking-wide lg:text-7xl">
+					<h3 className="mb-6 w-full text-4xl font-medium uppercase tracking-wide lg:text-6xl">
 						{whatIdo}.
 					</h3>
 					<p className=" max-w-md text-lg lg:text-2xl">{whatIdoDescription}</p>
@@ -46,7 +46,7 @@ export const SectionAbout = ({
 								onClick={() => handleClick(index)}
 								key={item.question}
 								className={twMerge(
-									"w-full cursor-pointer  border-b border-colorText/50 pb-4 text-2xl font-bold transition-all duration-500 lg:text-5xl",
+									"w-full cursor-pointer  border-b border-colorText/50 pb-4 text-2xl font-medium transition-all duration-500 lg:text-5xl",
 									index === active && "rounded-md bg-colorText p-6 text-colorBackground",
 								)}
 							>

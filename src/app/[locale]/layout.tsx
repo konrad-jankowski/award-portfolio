@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { Michroma, Roboto } from "next/font/google";
 import "./globals.css";
+import { useTranslations } from "next-intl";
 import { Providers } from "./providers";
 import { Navbar } from "@/ui/molecules/Navbar/Navbar";
 import { CustomCursor } from "@/ui/molecules/CustomCursor/CustomCursor";
 
-const michroma = Michroma({ subsets: ["latin"], weight: ["400"] });
-const roboto = Roboto({
-	subsets: ["latin"],
-	weight: "400",
-	variable: "--font-roboto",
-});
+type Link = {
+	title: string;
+	link: string;
+};
 
 export const metadata: Metadata = {
 	title: "Web Dev Agency",
@@ -24,15 +22,17 @@ export default function LocaleLayout({
 	children: React.ReactNode;
 	params: { locale: string };
 }>) {
+	const t = useTranslations("Navbar");
+	const navLinks = t.raw("navlinks") as Link[];
 	return (
 		<html lang={locale} suppressHydrationWarning>
 			<body
-				className={`${michroma.className} ${roboto.variable} bg-colorBackground selection:bg-colorText selection:text-colorBackground`}
+				className={`font-primary bg-colorBackground selection:bg-colorText selection:text-colorBackground`}
 			>
-				{/* <CustomCursor /> */}
+				<CustomCursor />
 				<Providers>
 					<div className="relative">
-						<Navbar />
+						<Navbar navLinks={navLinks} />
 						{children}
 					</div>
 				</Providers>

@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: "primary";
+	src: url("/fonts/schnyder.ttf") format("opentype");
+}
+@font-face {
+	font-family: "secondary";
+	src: url("/fonts/neue-montreal.ttf") format("opentype");
+}
+
 :root {
 	--color-primary: 39 222 191;
 	--color-background: 28 31 36;
@@ -22,7 +31,7 @@
 .t-unset {
 	top: unset;
 }
-/* body {
+body {
 	cursor: none;
 }
 
@@ -51,7 +60,7 @@ a {
 	color: inherit;
 	text-decoration: none;
 	cursor: none;
-} */
+}
 
 .stroked {
 	-webkit-text-fill-color: transparent;
@@ -94,8 +103,6 @@ a {
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	/* background-color: var(--color-text);
-	color: var(--color-background); */
 	transition: all 0.3s;
 	display: flex;
 	justify-content: center;

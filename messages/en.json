@@ -1,7 +1,25 @@
 {
+	"Navbar": {
+		"navlinks": [
+			{
+				"title": "About",
+				"link": "#contact"
+			},
+			{
+				"title": "Projects",
+				"link": "#projects"
+			},
+			{
+				"title": "Contact",
+				"link": "#contact"
+			}
+		]
+	},
 	"Hero": {
 		"hello": "Hello",
-		"intro": "MY NAME IS"
+		"intro": "MY NAME IS",
+		"aboutMe": "I am a web developer, based in Kraków, Poland.",
+		"avaliable": "Avaliable for work"
 	},
 	"About": {
 		"heading": "services",

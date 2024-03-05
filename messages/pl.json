@@ -1,7 +1,25 @@
 {
+	"Navbar": {
+		"navlinks": [
+			{
+				"title": "O mnie",
+				"link": "#contact"
+			},
+			{
+				"title": "Projekty",
+				"link": "#projects"
+			},
+			{
+				"title": "Kontakt",
+				"link": "#contact"
+			}
+		]
+	},
 	"Hero": {
 		"hello": "Cześć",
-		"intro": "JESTEM"
+		"intro": "JESTEM",
+		"aboutMe": "Jestem web developerem z Polski. Mieszkam w Krakowie.",
+		"avaliable": "Dostępny do pracy"
 	},
 	"About": {
 		"heading": "Moje usługi",
@@ -21,7 +39,7 @@
 				"answer": "Nowoczesne podejście do zarządzania treścią, które oddziela warstwę prezentacji (front-end) od warstwy zarządzania treścią (back-end). Umożliwia łatwą integrację z różnymi technologiami front-endowymi."
 			},
 			{
-				"question": "Kodowanie layotów z Figmy",
+				"question": "Kodowanie layotów",
 				"answer": "Proces konwersji projektów graficznych wykonanych w Figma na kod HTML, CSS i JavaScript. Umożliwia dokładne odtworzenie zaprojektowanych interfejsów użytkownika na funkcjonujących stronach internetowych."
 			}
 		]

@@ -21,7 +21,8 @@ export default {
 				section: "0 5rem 0 5rem",
 			},
 			fontFamily: {
-				secondary: ["var(--font-roboto)"],
+				primary: "primary",
+				secondary: "secondary",
 			},
 		},
 	},

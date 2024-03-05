@@ -33,30 +33,27 @@ export const HeroHeading = ({ hello, intro }: { hello: string; intro: string }) 
 	}, {});
 
 	return (
-		<div className=" relative z-50 flex flex-col items-center gap-4 text-center">
-			<div className="text-container">
-				<p
-					className="animate-text inline-flex items-center gap-6 text-5xl font-bold tracking-wider text-colorText lg:text-9xl"
-					style={{ opacity: 0 }}
-				>
-					<span className="h-6 w-6 rounded-full bg-colorText" /> {hello}
-					<span className="h-6 w-6 rounded-full bg-colorText" />
-				</p>
-				<br />
-				<p
-					className="stroked animate-text inline-flex items-center gap-6 py-8 text-center text-5xl font-bold text-colorText lg:text-9xl"
-					style={{ opacity: 0 }}
-				>
-					{intro}
-				</p>
-				<br />
-				<p
-					className="animate-text  inline-flex items-center gap-6 text-center text-4xl font-bold tracking-wider text-colorText lg:text-8xl"
-					style={{ opacity: 0 }}
-				>
-					Konrad
-				</p>
-			</div>
+		<div className="text-container relative z-50 flex w-full flex-col items-center  justify-center lg:items-start ">
+			<p
+				className="animate-text inline-flex items-center text-6xl font-medium tracking-wider text-colorText lg:text-9xl"
+				style={{ opacity: 0 }}
+			>
+				DEVELOPER
+			</p>
+			<br />
+			<p
+				className="animate-text inline-flex items-center py-8  text-center text-6xl font-medium text-colorText lg:self-center lg:text-9xl"
+				style={{ opacity: 0 }}
+			>
+				HI I'AM WEB
+			</p>
+			<br />
+			<p
+				className="animate-text inline-flex items-center text-center text-6xl font-medium tracking-wider text-colorText lg:self-end lg:text-9xl"
+				style={{ opacity: 0 }}
+			>
+				DESIGNER
+			</p>
 		</div>
 	);
 };

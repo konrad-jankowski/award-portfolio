@@ -25,7 +25,7 @@ export const Project = ({
 	return (
 		<div className="rounded-3xl border-t border-colorText/50 text-colorText">
 			<div className="mx-6 my-8 flex items-center justify-between gap-10 font-secondary">
-				<h3 className="text-lg font-semibold lg:text-xl">{name}</h3>
+				<h3 className="text-lg font-medium lg:text-xl">{name}</h3>
 				<div className="flex items-center ">
 					<a
 						target="_blank"
