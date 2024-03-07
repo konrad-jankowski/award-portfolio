@@ -3,6 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { SocialLinks } from "@/ui/atoms/SocialLinks";
+import { NavLink } from "@/ui/atoms/NavLink";
 
 type Link = {
 	title: string;
@@ -33,12 +34,7 @@ export const Menu = ({
 			<div className="mb-20 flex flex-col gap-4">
 				{navLinks.map((link) => {
 					return (
-						<div className="" onClick={() => setToggle(false)} key={link.title}>
-							<a className="text-5xl hover:opacity-60" href={link.link}>
-								{link.title}
-							</a>
-							{/* <div className="duration-100 after:absolute after:left-0 after:top-[60px] after:m-[0_auto] after:h-16 after:w-[500px] after:bg-[#1c1f24] after:content-['']"></div> */}
-						</div>
+						<NavLink key={link.title} title={link.title} link={link.link} setToggle={setToggle} />
 					);
 				})}
 			</div>

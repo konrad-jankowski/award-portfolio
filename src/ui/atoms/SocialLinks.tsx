@@ -4,8 +4,12 @@ import { Link } from "@/navigation";
 const links = [
 	{ name: "facebook", link: "/", Icon: FaFacebookF },
 	{ name: "instagram", link: "/", Icon: FaInstagram },
-	{ name: "github", link: "/", Icon: FaGithub },
-	{ name: "linkedin", link: "/", Icon: FaLinkedinIn },
+	{ name: "github", link: "/https://github.com/konrad-jankowski", Icon: FaGithub },
+	{
+		name: "linkedin",
+		link: "https://www.linkedin.com/in/konrad-jankowski-84b038275/",
+		Icon: FaLinkedinIn,
+	},
 ];
 
 export const SocialLinks = () => {

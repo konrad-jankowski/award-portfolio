@@ -4,7 +4,15 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-export const HeroHeading = ({ hello, intro }: { hello: string; intro: string }) => {
+export const HeroHeading = ({
+	hello,
+	intro,
+	intro2,
+}: {
+	hello: string;
+	intro: string;
+	intro2: string;
+}) => {
 	if (typeof window !== "undefined") {
 		gsap.registerPlugin(ScrollTrigger, useGSAP);
 	}
@@ -38,21 +46,21 @@ export const HeroHeading = ({ hello, intro }: { hello: string; intro: string }) 
 				className="animate-text inline-flex items-center text-6xl font-medium tracking-wider text-colorText lg:text-9xl"
 				style={{ opacity: 0 }}
 			>
-				DEVELOPER
+				{hello}
 			</p>
 			<br />
 			<p
 				className="animate-text inline-flex items-center py-8  text-center text-6xl font-medium text-colorText lg:self-center lg:text-9xl"
 				style={{ opacity: 0 }}
 			>
-				HI I'AM WEB
+				{intro}
 			</p>
 			<br />
 			<p
 				className="animate-text inline-flex items-center text-center text-6xl font-medium tracking-wider text-colorText lg:self-end lg:text-9xl"
 				style={{ opacity: 0 }}
 			>
-				DESIGNER
+				{intro2}
 			</p>
 		</div>
 	);

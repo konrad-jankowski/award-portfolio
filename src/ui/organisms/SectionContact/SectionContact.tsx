@@ -5,7 +5,7 @@ export const SectionContact = () => {
 	const t = useTranslations("Contact");
 
 	return (
-		<div className=" bg-colorBackground px-10 py-5 text-colorText lg:p-section">
+		<div id="contact" className=" bg-colorBackground px-10 py-5 text-colorText lg:p-section">
 			<div className="relative z-50 py-8 text-center lg:py-20 ">
 				<h3 className="text-2xl lg:text-5xl">{t("question")}</h3>
 				<h2 className="mt-4 text-5xl font-medium lg:text-8xl">{t("get-in")}</h2>

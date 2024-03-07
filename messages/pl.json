@@ -3,21 +3,22 @@
 		"navlinks": [
 			{
 				"title": "O mnie",
-				"link": "#contact"
+				"link": "about"
 			},
 			{
 				"title": "Projekty",
-				"link": "#projects"
+				"link": "projects"
 			},
 			{
 				"title": "Kontakt",
-				"link": "#contact"
+				"link": "contact"
 			}
 		]
 	},
 	"Hero": {
-		"hello": "Cześć",
-		"intro": "JESTEM",
+		"hello": "Tu Konrad",
+		"intro": "Web",
+		"intro2": "Developer",
 		"aboutMe": "Jestem web developerem z Polski. Mieszkam w Krakowie.",
 		"avaliable": "Dostępny do pracy"
 	},

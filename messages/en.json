@@ -3,21 +3,22 @@
 		"navlinks": [
 			{
 				"title": "About",
-				"link": "#contact"
+				"link": "about"
 			},
 			{
 				"title": "Projects",
-				"link": "#projects"
+				"link": "projects"
 			},
 			{
 				"title": "Contact",
-				"link": "#contact"
+				"link": "contact"
 			}
 		]
 	},
 	"Hero": {
-		"hello": "Hello",
-		"intro": "MY NAME IS",
+		"hello": "I'm Konrad",
+		"intro": "Web",
+		"intro2": "Developer",
 		"aboutMe": "I am a web developer, based in Kraków, Poland.",
 		"avaliable": "Avaliable for work"
 	},

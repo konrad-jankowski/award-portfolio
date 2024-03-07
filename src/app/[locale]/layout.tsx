@@ -27,7 +27,7 @@ export default function LocaleLayout({
 	return (
 		<html lang={locale} suppressHydrationWarning>
 			<body
-				className={`bg-colorBackground font-primary selection:bg-colorText selection:text-colorBackground`}
+				className={`cursor-auto bg-colorBackground font-primary selection:bg-colorText selection:text-colorBackground lg:cursor-none`}
 			>
 				<CustomCursor />
 				<Providers>

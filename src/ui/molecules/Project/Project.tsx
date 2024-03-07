@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { Github, Info, Link as Link2 } from "lucide-react";
-import { Link } from "@/navigation";
 
 type ProjectProps = {
 	name: string;
@@ -39,7 +38,7 @@ export const Project = ({
 					<Info />
 				</div>
 			</div>
-			<Link href="/">
+			<div>
 				<div className="relative h-60 w-full overflow-hidden rounded-3xl lg:h-[26rem] ">
 					<Image
 						src={featuredImg}
@@ -48,7 +47,7 @@ export const Project = ({
 						alt="project"
 					/>
 				</div>
-			</Link>
+			</div>
 			<div className="my-6 flex flex-wrap justify-end gap-4 font-secondary text-base lg:text-lg">
 				{responsibility.map((item) => (
 					<div

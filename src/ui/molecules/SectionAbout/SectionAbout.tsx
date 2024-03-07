@@ -30,14 +30,17 @@ export const SectionAbout = ({
 	};
 
 	return (
-		<section className="h-fit w-full bg-colorBackground px-6 pb-20 text-colorText lg:px-28">
+		<section
+			id="about"
+			className="h-fit w-full bg-colorBackground px-6 pb-20 text-colorText lg:px-28"
+		>
 			<SectionHeading title={heading} />
 			<div className="relative z-50 mt-14 flex flex-col justify-between gap-6 font-secondary lg:mt-20 lg:flex-row lg:gap-0 ">
 				<div className="w-full flex-1">
-					<h3 className="mb-6 w-full text-4xl font-medium uppercase tracking-wide lg:text-6xl">
+					<h3 className="mb-6 w-full text-3xl font-medium uppercase tracking-wide lg:text-5xl">
 						{whatIdo}.
 					</h3>
-					<p className=" max-w-md text-lg lg:text-2xl">{whatIdoDescription}</p>
+					<p className=" max-w-md text-lg lg:text-xl">{whatIdoDescription}</p>
 				</div>
 				<div className="flex flex-1 flex-col gap-8 ">
 					{aboutArray.map((item, index) => {

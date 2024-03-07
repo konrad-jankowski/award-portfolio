@@ -45,8 +45,8 @@ export const CustomCursor = () => {
 	}, []);
 
 	return (
-		<div id="custom-cursor" className="custom-cursor">
-			<span className="cursor-text ">View</span>
+		<div id="custom-cursor" className="custom-cursor hidden">
+			<span className="cursor-text "></span>
 		</div>
 	);
 };

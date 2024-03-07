@@ -31,9 +31,6 @@
 .t-unset {
 	top: unset;
 }
-body {
-	cursor: none;
-}
 
 .custom-cursor {
 	position: fixed;
